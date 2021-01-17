@@ -1,75 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <data>
-        <variable
-            name="myName"
-            type="com.example.aboutme.MyName" />
-    </data>
+    <TextView
+        android:id="@+id/box_one_text"
+        style="@style/WhiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:layout_marginEnd="@dimen/margin_wide"
+        android:text="@string/box_one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/box_two_text"
+        style="@style/WhiteBox"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/box_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box_one_text" />
 
+    <TextView
+        android:id="@+id/box_three_text"
+        style="@style/WhiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/box_three"
+        app:layout_constraintBottom_toTopOf="@+id/box_four_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/box_two_text"
+        app:layout_constraintTop_toTopOf="@+id/box_two_text" />
 
+    <TextView
+        android:id="@+id/box_four_text"
+        style="@style/WhiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Box Four"
+        app:layout_constraintBottom_toTopOf="@+id/box_five_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/box_two_text"
+        app:layout_constraintTop_toBottomOf="@+id/box_three_text" />
 
-        <TextView
-            android:id="@+id/name_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@={myName.name}"
-            android:textAlignment="center"
-            style="@style/NameStyle" />
+    <TextView
+        android:id="@+id/box_five_text"
+        style="@style/WhiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Box Five"
+        app:layout_constraintBottom_toBottomOf="@+id/box_two_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/box_two_text"
+        app:layout_constraintTop_toBottomOf="@+id/box_four_text" />
 
-        <EditText
-            android:id="@+id/nickname_edit"
-            style="@style/NameStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/what_is_your_nick_name"
-            android:inputType="textPersonName"
-            android:textAlignment="center" />
+    <TextView
+        android:id="@+id/label_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/how_to_play"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/info_text"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/done_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/done"
-            android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/tap_the_screen_and_buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/label_text"
+        app:layout_constraintTop_toBottomOf="@+id/box_two_text"
+        app:layout_constraintVertical_bias="0.4" />
 
-        <TextView
-            android:id="@+id/nickname_text"
-            style="@style/NameStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:visibility="gone"
-            android:text="@={myName.nickname}" />
+    <Button
+        android:id="@+id/red_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/button_red"
+        app:layout_constraintBaseline_toBaselineOf="@+id/yellow_button"
+        app:layout_constraintEnd_toStartOf="@+id/yellow_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:id="@+id/star_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/layout_margin"
-            android:contentDescription="@string/yellow_star"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
+    <Button
+        android:id="@+id/yellow_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/button_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/green_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/red_button"
+        app:layout_constraintTop_toBottomOf="@+id/label_text"
+        app:layout_constraintVertical_bias="1.0" />
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <Button
+        android:id="@+id/green_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/button_green"
+        app:layout_constraintBaseline_toBaselineOf="@+id/yellow_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/yellow_button" />
 
-
-            <TextView
-                android:id="@+id/bio_text"
-                style="@style/NameStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/padding"
-                android:paddingEnd="@dimen/padding"
-                android:text="@string/bio"
-                android:lineSpacingMultiplier="1.2"/>
-        </ScrollView>
-    </LinearLayout>
-</layout>
+</androidx.constraintlayout.widget.ConstraintLayout>

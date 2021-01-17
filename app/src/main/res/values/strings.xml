@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="name">Alec Dou</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="bio">
+        Different languages have different rules for grammatical agreement with quantity.
+        \n\nIn English, for example, the quantity 1 is a special case. We write "1 book", but for any other quantity we\'d write "n books".
+        \n\nThis distinction between singular and plural is very common, but other languages make finer distinctions.
+        \n\nThe full set supported by Android is zero, one, two, few, many, and other.
+        \n\nIn English, for example, the quantity 1 is a special case. We write "1 book", but for any other quantity we\'d write "n books".
+        \n\nThis distinction between singular and plural is very common, but other languages make finer distinctions.
+        \n\nThe full set supported by Android is zero, one, two, few, many, and other.
+        \n\nIn English, for example, the quantity 1 is a special case. We write "1 book", but for any other quantity we\'d write "n books".
+        \n\nThis distinction between singular and plural is very common, but other languages make finer distinctions.
+        \n\nThe full set supported by Android is zero, one, two, few, many, and other.
+    </string>
+    <string name="what_is_your_nick_name">What is your nickname</string>
+    <string name="done">Done</string>
+</resources>
